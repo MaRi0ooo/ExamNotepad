@@ -1,0 +1,152 @@
+﻿<Window x:Class="ExamNotepad.MainWindow"
+		xmlns:syntax="clr-namespace:UI.SyntaxBox;assembly=UI.SyntaxBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="BanjoPad"
+		Height="450"
+        WindowStartupLocation="CenterScreen"
+		Width="800" Icon="/logo.ico">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="res\StyleMenuItem.xaml"/>
+                <ResourceDictionary Source="res\StringResources.ukr.xaml"/>
+                <ResourceDictionary Source="res\StringResources.pl.xaml"/>
+                <ResourceDictionary Source="res\StringResources.en.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <Menu VerticalAlignment="Top" Background="#1F1F1F">
+                <MenuItem Foreground="#FFFFFFFF" Style="{StaticResource ParentMenuItem}" Header="{DynamicResource menuPanelFile}">
+                    <MenuItem x:Name="NewButtonMenu" Header="{DynamicResource newFileButton}" InputGestureText="Ctrl+N" Click="NewButtonMenu_Click"/>
+                    <MenuItem x:Name="OpenButtonMenu" Header="{DynamicResource openFileButton}" InputGestureText="Ctrl+O" Click="OpenButtonMenu_Click"/>
+                    <MenuItem x:Name="SaveButtonMenu" Header="{DynamicResource saveFileButton}" InputGestureText="Ctrl+S" Click="SaveButtonMenu_Click"/>
+                    <MenuItem x:Name="SaveAsButtonMenu" Header="{DynamicResource saveAsFileButton}" Click="SaveAsButtonMenu_Click"/>
+                    <Separator/>
+                    <MenuItem x:Name="ExitButtonMenu" Header="{DynamicResource exitFileButton}" Click="ExitButtonMenu_Click"/>
+                </MenuItem>
+                <MenuItem Foreground="#FFFFFF" Style="{StaticResource ParentMenuItem}" Header="{DynamicResource menuPanelEdit}">
+                    <MenuItem Header="{DynamicResource cancelEditButton}" Command="ApplicationCommands.Undo"/>
+                    <Separator/>
+                    <MenuItem Header="{DynamicResource cutEditButton}" Command="ApplicationCommands.Cut"/>
+                    <MenuItem Header="{DynamicResource copyEditButton}" Command="ApplicationCommands.Copy"/>
+                    <MenuItem Header="{DynamicResource pasteEditButton}" Command="ApplicationCommands.Paste"/>
+                    <MenuItem Header="{DynamicResource deleteEditButton}" Command="ApplicationCommands.Delete"/>
+                    <Separator/>
+                    <MenuItem Header="{DynamicResource commentEditButton}" Click="CommentButton_Click"/>
+                    <MenuItem Header="{DynamicResource unCommentEditButton}" Click="UnCommentButton_Click"/>
+                    <Separator/>
+                    <MenuItem Header="{DynamicResource selectAllEditButton}" Command="ApplicationCommands.SelectAll"/>
+                    <MenuItem x:Name="TimeAndDateButton" Header="{DynamicResource timeAndDateEditButton}" Click="TimeAndDateButton_Click"/>
+                </MenuItem>
+                <MenuItem Foreground="#FFFFFF" Style="{StaticResource ParentMenuItem}" Header="{DynamicResource menuPanelFormat}">
+                    <MenuItem x:Name="wordWrapButton" Header="{DynamicResource wordWrapFormatButton}" IsCheckable="True" IsChecked="False" Click="WordWrapButton_Click"/>
+                    <MenuItem x:Name="fontMenuButton" Header="{DynamicResource fontFormatButton}" Click="FontMenuButton_Click"/>
+                    <Separator/>
+                    <MenuItem x:Name="syntaxHighlighting" Header="{DynamicResource syntaxHighlightingFormatButton}" IsCheckable="True" IsChecked="False" Foreground="Red" Click="SyntaxHighlighting_Click"/>
+                </MenuItem>
+                <MenuItem Foreground="#FFFFFF" Style="{StaticResource ParentMenuItem}" Header="{DynamicResource menuPanelView}">
+                    <MenuItem x:Name="statusBarButton" Header="{DynamicResource statusBarViewButton}" IsCheckable="True" IsChecked="True" Click="StatusBarButton_Click"/>
+                    <Separator/>
+                    <MenuItem Style="{StaticResource ParentMenuItem}" Header="{DynamicResource languageViewButton}">
+                        <MenuItem Header="{DynamicResource englishViewButton}" Click="EnglishLanguage_Click"/>
+                        <MenuItem Header="{DynamicResource polishViewButton}" Click="PolishLanguage_Click"/>
+                        <MenuItem Header="{DynamicResource ukrainianViewButton}" Click="UkrainianLanguage_Click"/>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Foreground="#FFFFFF" Style="{StaticResource ParentMenuItem}" Header="{DynamicResource menuPanelHelp}">
+                    <MenuItem x:Name="aboutMenuButton" Foreground="#FFFFFF" Header="{DynamicResource aboutHelpButton}" Click="AboutMenuButton_Click"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Bottom">
+            <StatusBar x:Name="statusBarPanel" Background="#1F1F1F" VerticalAlignment="Bottom">
+                <StatusBarItem FlowDirection="LeftToRight">
+                    <TextBlock x:Name="currentDate" Foreground="#FFFFFF">
+						00:00 / 00.00.0000
+                    </TextBlock>
+                </StatusBarItem>
+                <StatusBarItem FlowDirection="LeftToRight">
+                    <Button x:Name="buttonSyntaxHighlighting" 
+							Width="20" Height="20" 
+							Background="Red"
+							BorderBrush="#FFFFFF"
+							Foreground="#FFFFFF" 
+							Content="{DynamicResource statusBarButtonSyntaxHighlighting}" 
+							FontSize="11" 
+							Click="ButtonSyntaxHighlighting_Click"/>
+                </StatusBarItem>
+                <StatusBarItem FlowDirection="RightToLeft">
+                    <TextBlock x:Name="labelCursorPosition" Foreground="#FFFFFF" Text="{DynamicResource statusBarCursorPosition}"/>
+                </StatusBarItem>
+            </StatusBar>
+        </StackPanel>
+        <TextBox x:Name="textBox"
+                 BorderBrush="{x:Null}"
+                 BorderThickness="0"
+				 Background="#121212"
+                 Foreground="#FFFFFF"
+                 syntax:SyntaxBox.Enable="False"
+				 syntax:SyntaxBox.ExpandTabs="False"
+				 syntax:SyntaxBox.AutoIndent="False"
+				 syntax:SyntaxBox.ShowLineNumbers="True"
+				 syntax:SyntaxBox.LineNumbersBackground="#1F1F1F"
+				 syntax:SyntaxBox.LineNumbersForeground="#FFFFFF"
+				 AcceptsReturn="True"
+				 AcceptsTab="True"
+				 HorizontalScrollBarVisibility="Auto"
+				 VerticalScrollBarVisibility="Auto" 
+				 FontFamily="Consolas" 
+				 FontSize="12" 
+				 SelectionChanged="TextBox_SelectionChanged">
+            <syntax:SyntaxBox.SyntaxDrivers>
+                <syntax:SyntaxConfig>
+
+                    <!-- Keywords -->
+                    <syntax:KeywordRule Foreground="Blue"
+										Keywords="abstract,as,base,bool,break,byte,case,catch,char,checked,class,const,continue,decimal,default,delegate,do,double,else,enum,event,explicit,extern,false,finally,fixed,float,for,foreach,goto,if,implicit,in,int,interface,internal,is,lock,long,namespace,new,null,object,operator,out,override,params,private,protected,public,readonly,ref,return,sbyte,sealed,short,sizeof,stackalloc,static,string,struct,switch,this,throw,true,try,typeof,uint,ulong,unchecked,unsafe,ushort,using,using,static,virtual,void,volatile,while,get,set,yield,var,auto"
+					/>
+
+                    <!-- Operators -->
+                    <syntax:KeywordRule Foreground="Purple"
+										Keywords="!,+,-,/,*,%,=,&amp;,^,|,&lt;,&gt;"
+										WholeWordsOnly="False"
+					/>
+
+                    <!-- Preproc directives -->
+                    <syntax:RegexRule Op="Line" Foreground="Gray" Pattern="^\s*#.*" />
+
+                    <!-- String -->
+                    <syntax:RegexRule Op="Line" Foreground="Maroon" Pattern="&quot;(?:[^&quot;\\]|\\.)*&quot;" />
+
+                    <!-- Verbatim string -->
+                    <syntax:RegexRule Op="Block" Foreground="Maroon" Pattern="@&quot;(?:[^&quot;])*&quot;" />
+
+                    <!-- Comment -->
+                    <syntax:RegexRule Op="Line" Foreground="Green" Pattern="//.*" />
+
+                    <!-- Multiline comment -->
+                    <syntax:RegexRule Op="Block" Foreground="Green" Pattern="(?m)/\*[^*]*\*+(?:[^\/*][^*]*\*+)*/" />
+
+                </syntax:SyntaxConfig>
+            </syntax:SyntaxBox.SyntaxDrivers>
+            <TextBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="{DynamicResource cancelContextMenuButton}" Command="ApplicationCommands.Undo"/>
+                    <Separator/>
+                    <MenuItem Header="{DynamicResource cutContextMenuButton}" Command="ApplicationCommands.Cut"/>
+                    <MenuItem Header="{DynamicResource copyContextMenuButton}" Command="ApplicationCommands.Copy"/>
+                    <MenuItem Header="{DynamicResource pasteContextMenuButton}" Command="ApplicationCommands.Paste"/>
+                    <MenuItem Header="{DynamicResource deleteContextMenuButton}" Command="ApplicationCommands.Delete"/>
+                    <Separator/>
+                    <MenuItem Header="{DynamicResource selectAllContextMenuButton}" Command="ApplicationCommands.SelectAll"/>
+                </ContextMenu>
+            </TextBox.ContextMenu>
+        </TextBox>
+    </DockPanel>
+</Window>

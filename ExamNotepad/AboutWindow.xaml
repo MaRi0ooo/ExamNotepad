@@ -1,0 +1,35 @@
+﻿<Window x:Class="ExamNotepad.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamNotepad"
+        mc:Ignorable="d"
+        Title="About BanjoPad" 
+		Height="450" Width="500" 
+		ResizeMode="NoResize" 
+		WindowStartupLocation="CenterScreen" Icon="/logo.ico">
+	<Grid>
+		<Image Source="/mainlogo.png" VerticalAlignment="Top"/>
+
+		<Label FontSize="14" Content="Copyright © 2022 by Edward Palmen" Margin="0,106,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+		<Label x:Name="operatingSystemVersion" FontSize="16" Content="OSVersion: " Margin="30,150,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+		<Label x:Name="versionLabel" FontSize="16" Content="Version:" Margin="30,181,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+		<Label FontSize="16" Content="Developer: MaRi0ooo" Margin="30,212,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+
+		<StackPanel>
+			<Label FontWeight="Bold" FontSize="20" Content="WebSite" Margin="0,272,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+			<TextBlock FontWeight="Bold" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center">
+			<Hyperlink NavigateUri="https://mari0ooo.github.io/">
+				https://mari0ooo.github.io/
+			</Hyperlink>
+			</TextBlock>
+			<Label FontWeight="Bold" FontSize="20" Content="GitHub" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+			<TextBlock FontWeight="Bold" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center">
+			<Hyperlink NavigateUri="https://github.com/MaRi0ooo">
+				https://github.com/MaRi0ooo
+			</Hyperlink>
+			</TextBlock>
+		</StackPanel>
+	</Grid>
+</Window>

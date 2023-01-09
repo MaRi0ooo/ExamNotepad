@@ -1,0 +1,70 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+					xmlns:system="clr-namespace:System;assembly=System.Runtime">
+	<system:String x:Key="menuPanelFile">_File</system:String>
+	<!-- FILE BUTTONS -->
+	<system:String x:Key="newFileButton">_New</system:String>
+	<system:String x:Key="openFileButton">_Open</system:String>
+	<system:String x:Key="saveFileButton">_Save</system:String>
+	<system:String x:Key="saveAsFileButton">_Save As!</system:String>
+	<system:String x:Key="exitFileButton">_Exit</system:String>
+	<!-- ******************************************************* -->
+
+
+	<system:String x:Key="menuPanelEdit">_Edit</system:String>
+	<!-- EDIT BUTTONS -->
+	<system:String x:Key="cancelEditButton">_Cancel</system:String>
+	<system:String x:Key="cutEditButton">_Cut</system:String>
+	<system:String x:Key="copyEditButton">_Copy</system:String>
+	<system:String x:Key="pasteEditButton">_Paste</system:String>
+	<system:String x:Key="deleteEditButton">_Delete</system:String>
+	<system:String x:Key="findEditButton">_Find</system:String>
+	<system:String x:Key="commentEditButton">_Comment</system:String>
+	<system:String x:Key="unCommentEditButton">_Uncomment</system:String>
+	<system:String x:Key="selectAllEditButton">_Select All</system:String>
+	<system:String x:Key="timeAndDateEditButton">_Time and Date</system:String>
+	<!-- ******************************************************* -->
+
+
+	<system:String x:Key="menuPanelFormat">_Format</system:String>
+	<!-- FORMAT BUTTONS -->
+	<system:String x:Key="wordWrapFormatButton">_WordWrap</system:String>
+	<system:String x:Key="fontFormatButton">_Font...</system:String>
+	<system:String x:Key="syntaxHighlightingFormatButton">_Syntax Highlighting</system:String>
+	<!-- ******************************************************* -->
+
+
+	<system:String x:Key="menuPanelView">_View</system:String>
+	<!-- VIEW BUTTONS -->
+	<system:String x:Key="statusBarViewButton">_Status Bar</system:String>
+	<system:String x:Key="languageViewButton">_Language</system:String>
+	<system:String x:Key="englishViewButton">_English</system:String>
+	<system:String x:Key="polishViewButton">_Polish</system:String>
+    <system:String x:Key="ukrainianViewButton">_Ukrainian</system:String>
+    <system:String x:Key="themeViewButton">_Themes</system:String>
+    <system:String x:Key="blackViewButton">_Black</system:String>
+    <system:String x:Key="defaultViewButton">_Default</system:String>
+    <!-- ******************************************************* -->
+
+
+	<system:String x:Key="menuPanelHelp">_Help</system:String>
+	<!-- HELP BUTTONS -->
+	<system:String x:Key="aboutHelpButton">_About</system:String>
+	<!-- ******************************************************* -->
+
+
+	<!-- STATUSBAR ITEMS -->
+	<system:String x:Key="statusBarButtonSyntaxHighlighting">SH</system:String>
+	<system:String x:Key="statusBarCursorPosition">Ln: 1, Ch: 1</system:String>
+	<!-- ******************************************************* -->
+
+
+	<!-- CONTEXT MENU -->
+	<system:String x:Key="cancelContextMenuButton">_Cancel</system:String>
+	<system:String x:Key="cutContextMenuButton">_Cut</system:String>
+	<system:String x:Key="copyContextMenuButton">_Copy</system:String>
+	<system:String x:Key="pasteContextMenuButton">_Paste</system:String>
+	<system:String x:Key="deleteContextMenuButton">_Delete</system:String>
+	<system:String x:Key="selectAllContextMenuButton">_Select All</system:String>
+	<!-- ******************************************************* -->
+</ResourceDictionary>

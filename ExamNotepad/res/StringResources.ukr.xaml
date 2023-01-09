@@ -1,0 +1,69 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+					xmlns:system="clr-namespace:System;assembly=System.Runtime">
+	<system:String x:Key="menuPanelFile">_Файл</system:String>
+	<!-- FILE BUTTONS -->
+	<system:String x:Key="newFileButton">_Новий</system:String>
+	<system:String x:Key="openFileButton">_Відкрити</system:String>
+	<system:String x:Key="saveFileButton">_Зберегти</system:String>
+	<system:String x:Key="saveAsFileButton">_Зберегти Як!</system:String>
+	<system:String x:Key="exitFileButton">_Вихід</system:String>
+	<!-- ******************************************************* -->
+
+
+	<system:String x:Key="menuPanelEdit">_Правка</system:String>
+	<!-- EDIT BUTTONS -->
+	<system:String x:Key="cancelEditButton">_Відмінити</system:String>
+	<system:String x:Key="cutEditButton">_Вирізати</system:String>
+	<system:String x:Key="copyEditButton">_Копіювати</system:String>
+	<system:String x:Key="pasteEditButton">_Вставити</system:String>
+	<system:String x:Key="deleteEditButton">_Видалити</system:String>
+	<system:String x:Key="commentEditButton">_Закоментувати</system:String>
+	<system:String x:Key="unCommentEditButton">_Розкоментувати</system:String>
+	<system:String x:Key="selectAllEditButton">_Виділити все</system:String>
+	<system:String x:Key="timeAndDateEditButton">_Час і Дата</system:String>
+	<!-- ******************************************************* -->
+
+
+	<system:String x:Key="menuPanelFormat">_Формат</system:String>
+	<!-- FORMAT BUTTONS -->
+	<system:String x:Key="wordWrapFormatButton">_Перенос слів</system:String>
+	<system:String x:Key="fontFormatButton">_Шрифт...</system:String>
+	<system:String x:Key="syntaxHighlightingFormatButton">_Підсвічування синтаксису</system:String>
+	<!-- ******************************************************* -->
+
+
+	<system:String x:Key="menuPanelView">_Вид</system:String>
+	<!-- VIEW BUTTONS -->
+	<system:String x:Key="statusBarViewButton">_Рядок стану</system:String>
+	<system:String x:Key="languageViewButton">_Мова</system:String>
+	<system:String x:Key="englishViewButton">_Англійська</system:String>
+	<system:String x:Key="polishViewButton">_Польська</system:String>
+	<system:String x:Key="ukrainianViewButton">_Українська</system:String>
+    <system:String x:Key="themeViewButton">_Теми</system:String>
+    <system:String x:Key="blackViewButton">_Чорна</system:String>
+    <system:String x:Key="defaultViewButton">_За замовчуванням</system:String>
+	<!-- ******************************************************* -->
+
+
+	<system:String x:Key="menuPanelHelp">_Довідка</system:String>
+	<!-- HELP BUTTONS -->
+	<system:String x:Key="aboutHelpButton">_Про программу</system:String>
+	<!-- ******************************************************* -->
+
+
+	<!-- STATUSBAR ITEMS -->
+	<system:String x:Key="statusBarButtonSyntaxHighlighting">ПС</system:String>
+	<system:String x:Key="statusBarCursorPosition">Ряд: 1, Кол: 1</system:String>
+	<!-- ******************************************************* -->
+
+
+	<!-- CONTEXT MENU -->
+	<system:String x:Key="cancelContextMenuButton">_Відмінити</system:String>
+	<system:String x:Key="cutContextMenuButton">_Вирізати</system:String>
+	<system:String x:Key="copyContextMenuButton">_Копіювати</system:String>
+	<system:String x:Key="pasteContextMenuButton">_Вставити</system:String>
+	<system:String x:Key="deleteContextMenuButton">_Видалити</system:String>
+	<system:String x:Key="selectAllContextMenuButton">_Виділити все</system:String>
+	<!-- ******************************************************* -->
+</ResourceDictionary>
