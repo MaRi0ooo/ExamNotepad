@@ -20,3 +20,8 @@ Download notepad directly from GitHub:
  <img src="https://i.imgur.com/iMgpn2y.png">
  <img src="https://i.imgur.com/VzrwtuT.png">
 </p>
+
+### License
+<a href="https://www.gnu.org/licenses/gpl-3.0.en.html">![](https://camo.githubusercontent.com/317e8956b95d7cd7ebdc2a75b836f19dee3c1ae5fa0fce5b277338e648880d4f/68747470733a2f2f7777772e676e752e6f72672f67726170686963732f67706c76332d3132377835312e706e67)</a>
+
+You may copy, distribute and modify the software as long as you track changes/dates in source files. Any modifications to or software including (via compiler) GPL-licensed code must also be made available under the GPL along with build & install instructions.
