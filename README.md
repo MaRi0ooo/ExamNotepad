@@ -4,7 +4,7 @@
 
 ExamNotepad is a free and open source notepad, similar to the default Windows notepad, but dark.
 
-[![C#](https://img.shields.io/badge/C%23-100.0%25-964D91)](https://en.wikipedia.org/wiki/C_Sharp_(programming_language))
+[![C#](https://img.shields.io/badge/C%23-100.0%25-178600?style=flat-square)](https://en.wikipedia.org/wiki/C_Sharp_(programming_language))
 [![NuGet](https://badgen.net/badge/icon/nuget?icon=nuget&label&style=flat-square)](https://https://nuget.org/)
 [![license gpl](https://img.shields.io/badge/license-GPL--3.0-orange?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0.html)
 ![os](https://img.shields.io/badge/os-linux--64%20%7C%20win--32%20%7C%20win--64-lightgrey?style=flat-square)
