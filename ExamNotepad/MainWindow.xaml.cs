@@ -196,7 +196,7 @@ namespace ExamNotepad
         private void FontMenuButton_Click(object sender, RoutedEventArgs e)
         {
             using (FontDialog fontDialog = new FontDialog()
-            { ShowColor = true, ShowApply = true, ShowEffects = true })
+            { ShowApply = true, ShowEffects = true })
             {
                 if (fontDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
