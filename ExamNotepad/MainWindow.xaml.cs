@@ -82,10 +82,11 @@ namespace ExamNotepad
         {
             Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog()
             {
-                Filter = "All files (*.*)|*.*|Text files (*.txt)|*.txt|C files (*.c)|*.c|C++ files (*.cpp)|*.cpp|C# files (*.cs)|*.cs",
+                Filter = "All files (*.*)|*.*|Text files (*.txt)|*.txt|C files (*.c)|*.c|C++ files (*.cpp)|*.cpp|C# files (*.cs)|*.cs|JavaScript files (*.js)|*.js|HTML files (*.html)|*.html|CSS files (*.css)|*.css",
                 FilterIndex = 1,
                 ValidateNames = true,
-                Multiselect = false
+                Multiselect = false,
+                AddExtension = true,
             };
             if (openFileDialog.ShowDialog() == true)
             {
